@@ -45,3 +45,8 @@
 /Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/PackageTrackingAPI.genruntimeconfig.cache
 /Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/ref/PackageTrackingAPI.dll
 /Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/PackageTrackingAPI.sourcelink.json
+/Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/bin/Debug/net9.0/AutoMapper.dll
+/Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
