@@ -44,7 +44,7 @@ public class PackagesController : ControllerBase
     }
 
     // OPTIONAL: GET: api/packages/track/ABC12345
-    // Быстрая выборка по коду отслеживания
+
     [HttpGet("track/{trackingNumber}")]
     public async Task<ActionResult<Package>> GetByTrackingNumber(string trackingNumber)
     {
@@ -62,10 +62,10 @@ public class PackagesController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Package>> CreatePackage(Package package)
     {
-        // Генерация простого tracking number (можно заменить на более "реальный")
+
         package.TrackingNumber = Guid.NewGuid().ToString("N")[..8].ToUpper();
 
-        // Начальный статус и история
+
         package.Status = PackageStatus.Created;
         package.CreatedAt = DateTime.UtcNow;
         package.History ??= new List<StatusHistory>();
@@ -82,7 +82,7 @@ public class PackagesController : ControllerBase
     }
 
     // NEW: GET: api/packages/{id}/allowed-statuses
-    // Вернуть список допустимых статусов для текущего
+
     [HttpGet("{id:int}/allowed-statuses")]
     public async Task<ActionResult<IEnumerable<PackageStatus>>> GetAllowedStatuses(int id)
     {
@@ -95,7 +95,7 @@ public class PackagesController : ControllerBase
     }
 
     // NEW: PUT: api/packages/{id}/status
-    // Смена статуса с валидацией и записью в историю
+
     [HttpPut("{id:int}/status")]
     public async Task<ActionResult<Package>> UpdateStatus(int id, [FromBody] UpdateStatusRequest request)
     {
@@ -115,7 +115,7 @@ public class PackagesController : ControllerBase
         if (!_transitions.CanTransition(package.Status, request.NewStatus))
             return BadRequest($"Cannot change status from '{package.Status}' to '{request.NewStatus}'.");
 
-        // Применяем новый статус
+
         package.Status = request.NewStatus;
         package.History.Add(new StatusHistory
         {
