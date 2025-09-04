@@ -1,13 +1,10 @@
 ---
-
 ## 📄 README.md
 
-````markdown
 # 📦 Package Tracking API
 
-A simple **ASP.NET Core Web API** for managing package tracking.  
-Implements CRUD operations, status transitions with validation rules, and status history logging.  
-
+A simple **ASP.NET Core Web API** for managing package tracking.
+Implements CRUD operations, status transitions with validation rules, and status history logging.
 ---
 
 ## 🚀 Features
