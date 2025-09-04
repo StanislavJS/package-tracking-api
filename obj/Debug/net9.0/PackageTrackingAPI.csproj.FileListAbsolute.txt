@@ -44,3 +44,4 @@
 /Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/PackageTrackingAPI.pdb
 /Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/PackageTrackingAPI.genruntimeconfig.cache
 /Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/ref/PackageTrackingAPI.dll
+/Users/dariashagun/Desktop/Js goit-js-hw/web application/PackageTrackingAPI/obj/Debug/net9.0/PackageTrackingAPI.sourcelink.json

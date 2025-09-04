@@ -9,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers()
     .AddJsonOptions(o =>
     {
-        // Чтобы в JSON enum статусов шёл строкой: "Created", "Sent", ...
         o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
 builder.Services.AddEndpointsApiExplorer();
@@ -19,8 +18,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("PackagesDB"));
 
-// DI: правила переходов статусов
+// Dependency Injection
 builder.Services.AddScoped<IStatusTransitionService, StatusTransitionService>();
+
+// 🚀 Добавляем CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // разрешаем наш фронтенд
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
@@ -31,7 +42,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection(); // если ругается на https — не критично, работаем по http
+app.UseHttpsRedirection();
+
 app.UseAuthorization();
+
+// 🚀 Подключаем CORS перед MapControllers()
+app.UseCors("AllowFrontend");
+
 app.MapControllers();
+
 app.Run();
