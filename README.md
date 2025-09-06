@@ -1,10 +1,14 @@
+**README.md**
+
 ---
+
 ## 📄 README.md
 
 # 📦 Package Tracking API
 
-A simple **ASP.NET Core Web API** for managing package tracking.
+A simple **ASP.NET Core Web API** for managing package tracking.  
 Implements CRUD operations, status transitions with validation rules, and status history logging.
+
 ---
 
 ## 🚀 Features
@@ -14,13 +18,13 @@ Implements CRUD operations, status transitions with validation rules, and status
 - View all packages or details of a specific one.
 - Change package status with validation according to business rules.
 - Store full history of status changes with timestamps.
-- Swagger UI for testing.
+- **Swagger UI** available for testing.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **ASP.NET Core 7**
+- **ASP.NET Core 9**
 - **Entity Framework Core (InMemory DB)**
 - **Swagger / Swashbuckle**
 
@@ -51,7 +55,7 @@ cd package-tracking-api
 dotnet restore
 ```
 
-### 3. Run the API
+### 3. Run the API locally
 
 ```bash
 dotnet run
@@ -59,8 +63,15 @@ dotnet run
 
 By default, the app runs on:
 
-- `http://localhost:5259`
-- Swagger UI: [http://localhost:5259/swagger](http://localhost:5259/swagger)
+- Local: `http://localhost:5259`
+- Swagger UI (local): [http://localhost:5259/swagger](http://localhost:5259/swagger)
+
+---
+
+## 🌐 Deployed Version
+
+- **Base URL:** [https://package-tracking-api-vj76.onrender.com](https://package-tracking-api-vj76.onrender.com)
+- **Swagger UI:** [https://package-tracking-api-vj76.onrender.com/swagger/index.html](https://package-tracking-api-vj76.onrender.com/swagger/index.html) ✅
 
 ---
 
@@ -110,7 +121,18 @@ By default, the app runs on:
 - Use of EF Core InMemory
 - Swagger for testing
 
-```
+````
 
 ---
-```
+
+### Следующие шаги
+1. Обнови у себя `README.md` в репозитории API.
+2. Сделай коммит и пуш:
+
+```bash
+git add README.md
+git commit -m "Docs: update README with deployed Swagger UI link"
+git push origin main
+````
+
+Хочешь, я ещё подготовлю аналогичный README для **фронтенда (Vercel)**, чтобы всё выглядело одинаково красиво?
