@@ -121,18 +121,7 @@ By default, the app runs on:
 - Use of EF Core InMemory
 - Swagger for testing
 
-````
+```
 
 ---
-
-### Следующие шаги
-1. Обнови у себя `README.md` в репозитории API.
-2. Сделай коммит и пуш:
-
-```bash
-git add README.md
-git commit -m "Docs: update README with deployed Swagger UI link"
-git push origin main
-````
-
-Хочешь, я ещё подготовлю аналогичный README для **фронтенда (Vercel)**, чтобы всё выглядело одинаково красиво?
+```
